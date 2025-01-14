@@ -97,6 +97,8 @@ export const es = {
 		},
 		utils: {
 			couldNotLoadData: 'No se pudieron cargar datos.',
+			loadMoreData: 'Cargar más',
+			loading: 'Cargando',
 			retry: 'Rever',
 		},
 		swapProgressCard: {

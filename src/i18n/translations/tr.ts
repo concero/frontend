@@ -97,6 +97,8 @@ export const tr = {
 		},
 		utils: {
 			couldNotLoadData: 'Veri yüklenemedi.',
+			loadMoreData: 'Daha fazla yükle',
+			loading: 'Yükleniyor',
 			retry: 'Yeniden dene',
 		},
 		swapProgressCard: {

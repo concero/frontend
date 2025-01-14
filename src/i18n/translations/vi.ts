@@ -97,6 +97,8 @@ export const vi = {
 		},
 		utils: {
 			couldNotLoadData: 'Không thể tải dữ liệu.',
+			loadMoreData: 'Tải thêm',
+			loading: 'Đang tải',
 			retry: 'Thử lại',
 		},
 		swapProgressCard: {

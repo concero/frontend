@@ -96,6 +96,8 @@ export const th = {
 		},
 		utils: {
 			couldNotLoadData: 'ไม่สามารถโหลดข้อมูลได้',
+			loadMoreData: 'โหลดเพิ่มเติม',
+			loading: 'กำลังโหลด',
 			retry: 'ลองใหม่',
 		},
 		swapProgressCard: {

@@ -96,6 +96,8 @@ export const id = {
 		},
 		utils: {
 			couldNotLoadData: 'Tidak dapat memuat data.',
+			loadMoreData: 'Muat lebih banyak',
+			loading: 'Memuat',
 			retry: 'Coba lagi',
 		},
 		swapProgressCard: {

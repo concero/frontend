@@ -96,6 +96,8 @@ export const zh = {
 		},
 		utils: {
 			couldNotLoadData: '无法加载数据。',
+			loadMoreData: '加载更多',
+			loading: '加载中',
 			retry: '重试',
 		},
 		swapProgressCard: {

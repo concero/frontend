@@ -97,6 +97,8 @@ export const ru = {
 		},
 		utils: {
 			couldNotLoadData: 'Не удалось загрузить данные.',
+			loadMoreData: 'Загрузить больше',
+			loading: 'Загрузка',
 			retry: 'Повторить попытку',
 		},
 		swapProgressCard: {

@@ -141,6 +141,8 @@ export const en = {
 		},
 		utils: {
 			couldNotLoadData: 'Couldn’t load data.',
+			loadMoreData: 'Load more',
+			loading: 'Loading',
 			retry: 'Retry',
 		},
 		swapProgressCard: {

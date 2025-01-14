@@ -96,6 +96,8 @@ export const ko = {
 		},
 		utils: {
 			couldNotLoadData: '데이터를 불러올 수 없습니다.',
+			loadMoreData: '더 보기',
+			loading: '로딩 중',
 			retry: '다시 시도',
 		},
 		swapProgressCard: {

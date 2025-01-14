@@ -97,6 +97,8 @@ export const pt = {
 		},
 		utils: {
 			couldNotLoadData: 'Não foi possível carregar os dados.',
+			loadMoreData: 'Carregar mais',
+			loading: 'Carregando',
 			retry: 'Tentar novamente',
 		},
 		swapProgressCard: {

@@ -97,6 +97,8 @@ export const ua = {
 		},
 		utils: {
 			couldNotLoadData: 'Не вдалося завантажити дані.',
+			loadMoreData: 'Завантажити більше',
+			loading: 'Загрузка',
 			retry: 'Повторити спробу',
 		},
 		swapProgressCard: {
