@@ -45,4 +45,7 @@ export interface IUser {
 	multiplier: UserMultiplier
 	streak: UserStreaks
 	connectedSocials: UserConnectedSocials
+	termsOfUse?: {
+		accepted_version: string | null
+	}
 }

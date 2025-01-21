@@ -3,7 +3,7 @@ import stylelint from 'vite-plugin-stylelint'
 import react from '@vitejs/plugin-react-swc'
 import precss from 'precss'
 import EnvironmentPlugin from 'vite-plugin-environment'
-
+import svgr from 'vite-plugin-svgr'
 export default defineConfig({
 	plugins: [
 		react(),
@@ -14,6 +14,7 @@ export default defineConfig({
 			emitErrorAsWarning: true,
 		}),
 		EnvironmentPlugin('all'),
+		svgr(),
 	],
 	css: {
 		postcss: {

@@ -1,10 +1,41 @@
 {
   "compilerOptions": {
-    "composite": true,
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "types": [
+      "vite/client",
+      "vitest/globals",
+      "node",
+      "@testing-library/jest-dom"
+    ],
+    // "composite": true,
     "skipLibCheck": true,
+    "checkJs": false,
     "module": "ESNext",
+    "allowSyntheticDefaultImports": true,
+    // bundler
     "moduleResolution": "bundler",
-    "allowSyntheticDefaultImports": true
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+    "jsx": "react-jsx",
   },
-  "include": ["vite.config.ts"]
+  "include": [
+    "vite.config.ts",
+    "./.storybook/*",
+    "**/*.stories.tsx",
+    "src/storybook/decorators/**/*",
+    "*/*.test.ts",
+    "*/*.test.tsx"
+  ],
+  "exclude": [
+    "node_modules/*",
+    "dist",
+  ]
 }

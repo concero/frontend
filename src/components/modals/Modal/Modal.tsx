@@ -1,17 +1,16 @@
-import { type FC, type KeyboardEvent, type MouseEvent, type ReactNode, useEffect } from 'react'
+import { type FC, type MouseEvent, PropsWithChildren, type ReactNode, useEffect } from 'react'
 import { animated, useSpring, useTransition } from '@react-spring/web'
 import classNames from './Modal.module.pcss'
 import { ModalHeader } from './ModalHeader'
 
-export interface ModalProps {
+export type ModalProps = PropsWithChildren<{
 	title?: ReactNode | string
 	show: boolean
 	setShow: (show: boolean) => void
-	children?: ReactNode
 	className?: string
 	isHeaderVisible?: boolean
 	position?: 'top' | 'bottom' | 'center'
-}
+}>
 
 const positionClassMap = {
 	top: 'jfs',
@@ -28,11 +27,11 @@ export const Modal: FC<ModalProps> = ({
 	className,
 	isHeaderVisible = true,
 }) => {
-	const stopPropagation = (event: MouseEvent<HTMLDivElement, MouseEvent>) => {
+	const stopPropagation = (event: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
 		event.stopPropagation()
 	}
 
-	const handleKeyDown = (event: KeyboardEvent) => {
+	const handleKeyDown = (event: globalThis.KeyboardEvent) => {
 		if (event.key === 'Escape') {
 			setShow(false)
 		}

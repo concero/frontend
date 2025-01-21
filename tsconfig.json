@@ -1,46 +1,9 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ESNext",
-      "es2015.promise"
-    ],
-    "plugins": [
-      {
-        "name": "typescript-plugin-css-modules",
-        "options": {
-          "postcssOptions": {
-            "useConfig": true
-          }
-        }
-      }
-    ],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    /* Bundler mode */
-    "moduleResolution": "node",
-    "allowImportingTsExtensions": false,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "types": [
-      "vitest/globals"
-    ],
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowSyntheticDefaultImports": true
-  },
-  "include": [
-    "src",
-    "node_modules/eslint-plugin-react/lib/types.d.ts",
-  ],
+  "files": [],
   "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
     {
       "path": "./tsconfig.node.json"
     }

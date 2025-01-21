@@ -74,3 +74,5 @@ dist-ssr
 .stylelintcache
 .env
 .vercel
+
+*storybook.log

@@ -1,6 +1,7 @@
 import { fireEvent, render, waitFor } from '@testing-library/react'
 import { ListModal } from '../../components/modals/ListModal/ListModal'
 import jest from 'jest-mock'
+import React from 'react'
 
 const mockGetItems = jest.fn().mockResolvedValue([])
 

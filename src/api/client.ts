@@ -5,11 +5,12 @@ const client = axios.create({
 		'Content-Type': 'application/json',
 		Accept: 'application/json',
 	},
+	withCredentials: true,
 })
 
-const request = async (options: AxiosRequestConfig): Promise<any> => {
+const request = async <TResponse extends any>(options: AxiosRequestConfig) => {
 	try {
-		const response: AxiosResponse = await client(options)
+		const response: AxiosResponse<TResponse, any> = await client(options)
 		return response
 	} catch (error) {
 		console.error('Error', error.response)
@@ -17,24 +18,24 @@ const request = async (options: AxiosRequestConfig): Promise<any> => {
 	}
 }
 
-export const get = async (url: string, params?: any, headers?: any): Promise<any> =>
-	await request({
+export const get = async <TResponse extends any>(url: string, params?: any, headers?: any) =>
+	await request<TResponse>({
 		url,
 		method: 'GET',
 		params,
 		headers,
 	})
 
-export const post = async (url: string, data: any, headers?: any): Promise<any> =>
-	await request({
+export const post = async <TResponse extends any>(url: string, data: any, headers?: any) =>
+	await request<TResponse>({
 		url,
 		method: 'POST',
 		data,
 		headers,
 	})
 
-export const patch = async (url: string, data: any, headers?: any): Promise<any> =>
-	await request({
+export const patch = async <TResponse extends any>(url: string, data: any, headers?: any) =>
+	await request<TResponse>({
 		url,
 		method: 'PATCH',
 		data,

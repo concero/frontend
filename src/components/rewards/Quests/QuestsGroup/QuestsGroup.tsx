@@ -5,7 +5,7 @@ import { fetchQuests, type GroupedQuests } from '../../../../api/concero/quest/f
 import type { IUser } from '../../../../api/concero/user/userType'
 import { QuestCard } from '../QuestCard/QuestCard'
 import { QuestPlaceholder } from '../QuestPlaceholder/questplaceholder'
-import { useAccount } from 'wagmi'
+import { useAccount, useSignMessage } from 'wagmi'
 
 interface QuestsCardProps {
 	user: IUser | null | undefined
@@ -21,12 +21,16 @@ const LoadingPlaceholders = ({ variant, className }: { variant: 'big' | 'normal'
 export const QuestsGroup = ({ user }: QuestsCardProps) => {
 	const { address } = useAccount()
 	const [quests, setQuests] = useState<GroupedQuests | null>(null)
-	const [isLoading, setIsLoading] = useState<boolean>(true)
+	const [isLoading, setIsLoading] = useState<boolean>(false)
 
 	const handleGetQuests = useCallback(async () => {
-		const fetchedQuests = await fetchQuests()
-		setQuests(fetchedQuests)
-		setIsLoading(false)
+		fetchQuests()
+			.then(fetchedQuests => {
+				setQuests(fetchedQuests)
+			})
+			.finally(() => {
+				setIsLoading(false)
+			})
 	}, [address])
 
 	useEffect(() => {

@@ -1,0 +1,54 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext",
+            "es2015.promise"
+        ],
+        "plugins": [
+            {
+                "name": "typescript-plugin-css-modules",
+                "options": {
+                    "postcssOptions": {
+                        "useConfig": true
+                    }
+                }
+            }
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        /* Bundler mode */
+        "moduleResolution": "node",
+        "allowImportingTsExtensions": false,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        "types": [
+            "vitest/globals",
+            "vite/client",
+            "vite-plugin-svgr/client"
+        ],
+        /* Linting */
+        "strict": true,
+        "allowSyntheticDefaultImports": true,
+        "noPropertyAccessFromIndexSignature": false,
+        "noUncheckedIndexedAccess": false,
+        "noImplicitReturns": false,
+        "noFallthroughCasesInSwitch": false,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false
+    },
+    "include": [
+        "src",
+        "node_modules/eslint-plugin-react/lib/types.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "**/*.test.ts",
+        "**/*.test.tsx",
+    ]
+}
